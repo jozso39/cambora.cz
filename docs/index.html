@@ -92,12 +92,13 @@
       <article class="project">
         <header>
           <h3>Realiterier</h3>
-          <span class="status off">paused</span>
+          <span class="status wip">live, scraper paused</span>
         </header>
         <p class="tagline">A real-estate watchdog that reads the ad text.</p>
         <p>Scrapes four Czech property portals, normalises ads into PostgreSQL and extracts with an LLM what portals don’t categorise — pets allowed, no commission, brick or panel. Groups the same flat across portals, flags scam patterns and e-mails matching ads within minutes. Prepaid watchdogs through Stripe.</p>
-        <p class="note">Hibernated on AWS since September 2026.</p>
+        <p class="note">The web app runs on the Pi; the scraper and paid APIs are switched off, so no new ads flow in for now.</p>
         <ul class="pills" aria-label="Stack"><li>Bun</li><li>PostgreSQL</li><li>Drizzle</li><li>SES</li><li>Stripe</li><li>hexagonal</li></ul>
+        <p><a class="more" href="https://realiterier.cambora.cz/">Live site (Czech)<span aria-hidden="true"> →</span></a></p>
       </article>
       <article class="project">
         <header>

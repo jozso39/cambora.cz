@@ -20,6 +20,7 @@ const links = {
   jev: 'https://github.com/jozso39/jev-model-router-for-claude',
   deskohrani: 'https://deskohrani.cambora.cz/',
   zizkostel: 'https://zizkostel.cambora.cz/cs',
+  realiterier: 'https://realiterier.cambora.cz/',
 }
 
 export const content = {
@@ -82,12 +83,13 @@ export const content = {
         },
         {
           title: 'Realiterier',
-          state: 'off',
-          status: 'paused',
+          state: 'wip',
+          status: 'live, scraper paused',
           tagline: 'A real-estate watchdog that reads the ad text.',
           desc: 'Scrapes four Czech property portals, normalises ads into PostgreSQL and extracts with an LLM what portals don’t categorise — pets allowed, no commission, brick or panel. Groups the same flat across portals, flags scam patterns and e-mails matching ads within minutes. Prepaid watchdogs through Stripe.',
           stack: ['Bun', 'PostgreSQL', 'Drizzle', 'SES', 'Stripe', 'hexagonal'],
-          note: 'Hibernated on AWS since September 2026.',
+          note: 'The web app runs on the Pi; the scraper and paid APIs are switched off, so no new ads flow in for now.',
+          link: { href: links.realiterier, label: 'Live site (Czech)' },
         },
         {
           title: 'kviff.ai',
@@ -231,12 +233,13 @@ export const content = {
         },
         {
           title: 'Realiterier',
-          state: 'off',
-          status: 'pozastaveno',
+          state: 'wip',
+          status: 'běží, scraper stojí',
           tagline: 'Hlídací pes na reality, který čte text inzerátu.',
           desc: 'Stahuje inzeráty ze čtyř českých realitních portálů, normalizuje je do PostgreSQL a pomocí LLM vytahuje to, co portály nekategorizují — zvířata povolena, bez provize, cihla nebo panel. Slučuje stejný byt napříč portály, označuje podvodné vzorce a do pár minut posílá e-mailem odpovídající inzeráty. Předplacení hlídači přes Stripe.',
           stack: ['Bun', 'PostgreSQL', 'Drizzle', 'SES', 'Stripe', 'hexagonální architektura'],
-          note: 'Od září 2026 uspáno na AWS.',
+          note: 'Web běží na Pi; scraper a placená API jsou vypnuté, nové inzeráty zatím nepřitékají.',
+          link: { href: links.realiterier, label: 'Živý web' },
         },
         {
           title: 'kviff.ai',

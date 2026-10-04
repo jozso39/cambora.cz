@@ -92,12 +92,13 @@
       <article class="project">
         <header>
           <h3>Realiterier</h3>
-          <span class="status off">pozastaveno</span>
+          <span class="status wip">běží, scraper stojí</span>
         </header>
         <p class="tagline">Hlídací pes na reality, který čte text inzerátu.</p>
         <p>Stahuje inzeráty ze čtyř českých realitních portálů, normalizuje je do PostgreSQL a pomocí LLM vytahuje to, co portály nekategorizují — zvířata povolena, bez provize, cihla nebo panel. Slučuje stejný byt napříč portály, označuje podvodné vzorce a do pár minut posílá e-mailem odpovídající inzeráty. Předplacení hlídači přes Stripe.</p>
-        <p class="note">Od září 2026 uspáno na AWS.</p>
+        <p class="note">Web běží na Pi; scraper a placená API jsou vypnuté, nové inzeráty zatím nepřitékají.</p>
         <ul class="pills" aria-label="Technologie"><li>Bun</li><li>PostgreSQL</li><li>Drizzle</li><li>SES</li><li>Stripe</li><li>hexagonální architektura</li></ul>
+        <p><a class="more" href="https://realiterier.cambora.cz/">Živý web<span aria-hidden="true"> →</span></a></p>
       </article>
       <article class="project">
         <header>
