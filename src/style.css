@@ -1,0 +1,349 @@
+/* cambora.cz — one stylesheet, no framework.
+   Colour lives in a handful of tokens; the rest is type and whitespace. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #faf7f2;
+  --bg-2: #f2ece4;
+  --ink: #1d1b18;
+  --ink-2: #5d5850;
+  --line: #e3dcd1;
+  --accent: #b8441f;
+  --accent-ink: #9a3716;
+  --accent-soft: #f7e3d9;
+  --on: #2d6f48;
+  --on-soft: #dff0e5;
+  --wip: #8a5f00;
+  --wip-soft: #f8ecc9;
+  --off: #6b665e;
+  --off-soft: #ebe6df;
+  --shadow: 0 1px 2px rgba(29, 27, 24, 0.06), 0 8px 24px rgba(29, 27, 24, 0.06);
+  --measure: 46rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141518;
+    --bg-2: #1d1f24;
+    --ink: #ebe7e1;
+    --ink-2: #a9a49c;
+    --line: #2c2f36;
+    --accent: #f08a5e;
+    --accent-ink: #f6a784;
+    --accent-soft: #3a2219;
+    --on: #86d6a1;
+    --on-soft: #1b3326;
+    --wip: #e7c35f;
+    --wip-soft: #3a3115;
+    --off: #9d988f;
+    --off-soft: #262930;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; margin: 0; }
+p { margin: 0 0 1rem; }
+ul { margin: 0; padding: 0; }
+
+.skip {
+  position: absolute; left: 1rem; top: -4rem;
+  background: var(--accent); color: #fff; padding: 0.5rem 0.75rem; border-radius: 0.4rem;
+  z-index: 100;
+}
+.skip:focus { top: 1rem; }
+
+/* ---- top bar ---------------------------------------------------------- */
+
+.top {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.1rem 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 1.1rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.45rem;
+}
+.top nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.95rem; }
+.top nav a { color: var(--ink-2); text-decoration: none; }
+.top nav a:hover { color: var(--accent); }
+.top nav .lang {
+  color: var(--accent-ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem;
+}
+
+/* ---- layout ----------------------------------------------------------- */
+
+main { max-width: var(--measure); margin: 0 auto; padding: 0 1rem 3rem; }
+
+.block { padding-top: 3.5rem; }
+
+.label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+h2 { font-size: 1.75rem; margin-bottom: 0.9rem; }
+.since { font-size: 1rem; font-weight: 500; color: var(--ink-2); white-space: nowrap; }
+.lead { font-size: 1.1rem; color: var(--ink-2); max-width: 40rem; }
+
+/* ---- hero ------------------------------------------------------------- */
+
+.hero {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.hero h1 { font-size: clamp(2.3rem, 7vw, 3.2rem); font-weight: 800; }
+.role { color: var(--accent); font-weight: 600; font-size: 1.15rem; margin: 0.35rem 0 1.4rem; }
+.intro { font-size: 1.1rem; max-width: 40rem; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
+.hero-links a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  border-radius: 999px;
+  padding: 0.35rem 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.hero-links a:hover { border-color: var(--accent); color: var(--accent); }
+.photo {
+  width: 7.5rem; height: 7.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--accent-soft);
+  order: -1;
+}
+@media (min-width: 640px) {
+  .hero { grid-template-columns: 1fr auto; gap: 2.5rem; }
+  .photo { width: 10rem; height: 10rem; order: 0; margin-top: 0.5rem; }
+}
+
+/* ---- now -------------------------------------------------------------- */
+
+.bullets { list-style: none; margin: 0 0 1.25rem; }
+.bullets li { position: relative; padding-left: 1.4rem; margin-bottom: 0.7rem; }
+.bullets li::before {
+  content: "";
+  position: absolute; left: 0; top: 0.7em;
+  width: 0.55rem; height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.pills { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pills li {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-2);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+}
+
+/* ---- work ------------------------------------------------------------- */
+
+.projects { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+.project {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: var(--shadow);
+}
+.project header {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 0.4rem 1rem; margin-bottom: 0.35rem;
+}
+.project h3 { font-size: 1.25rem; }
+.status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  white-space: nowrap;
+}
+.status.on { color: var(--on); background: var(--on-soft); }
+.status.wip { color: var(--wip); background: var(--wip-soft); }
+.status.off { color: var(--off); background: var(--off-soft); }
+.tagline { font-weight: 600; margin-bottom: 0.5rem; }
+.note { color: var(--ink-2); font-size: 0.95rem; }
+.project .pills { margin: 0.25rem 0 0.9rem; }
+.project .pills li { background: var(--bg); }
+.project p:last-child { margin-bottom: 0; }
+.more { font-weight: 600; }
+.more-github { margin-top: 1.5rem; color: var(--ink-2); }
+
+/* ---- before ----------------------------------------------------------- */
+
+.timeline { margin: 0; }
+.timeline > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.timeline > div:last-child { border-bottom: 1px solid var(--line); }
+.timeline dt { color: var(--ink-2); font-size: 0.95rem; }
+.timeline .when { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.timeline .where { display: block; color: var(--ink); font-weight: 600; }
+.timeline dd { margin: 0; }
+@media (min-width: 640px) {
+  .timeline > div { grid-template-columns: 11rem 1fr; }
+}
+.certs { color: var(--ink-2); font-size: 0.95rem; margin-top: 1rem; }
+
+/* ---- contact / the háček puzzle --------------------------------------- */
+
+.hacek {
+  margin: 1.5rem 0;
+  padding: 1.5rem 1.25rem;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+.hint { color: var(--ink-2); margin-bottom: 1.25rem; }
+.stage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin: 0 0 0.5rem;
+  min-height: 3.5rem;
+}
+/* The slot keeps the caron's place in the row while the caron itself is
+   position:fixed under the pointer — otherwise the word would jump left the
+   moment a drag starts and the C would move away from the visitor's aim. */
+.slot { flex: none; width: 3rem; height: 3rem; }
+.solved .slot { display: none; }
+.caron {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem; height: 3rem;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--accent);
+  background: var(--bg);
+  border: 2px dashed var(--accent);
+  border-radius: 0.6rem;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+}
+.caron.dragging {
+  position: fixed;
+  z-index: 20;
+  cursor: grabbing;
+  transition: none;
+  box-shadow: var(--shadow);
+}
+.caron[hidden] { display: none; }
+.word {
+  font-size: clamp(2rem, 8vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.target {
+  font: inherit;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 2px dashed var(--accent);
+  border-radius: 0.4rem;
+  padding: 0 0.1em;
+  margin: 0 0.04em;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+.target.over, .target:hover { transform: scale(1.12); }
+.solved .target {
+  border-style: solid;
+  background: transparent;
+  cursor: default;
+  animation: settle 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes settle {
+  0% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+.reveal[hidden] { display: none; }
+.success { color: var(--ink-2); margin: 0.75rem 0 0.4rem; }
+.addr { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; margin: 0; }
+.addr a { font-size: 1.3rem; font-weight: 700; word-break: break-all; }
+.addr button {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  cursor: pointer;
+}
+.addr button:hover { border-color: var(--accent); color: var(--accent); }
+.elsewhere { color: var(--ink-2); }
+
+/* ---- footer ----------------------------------------------------------- */
+
+.bottom {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+.bottom p { margin-bottom: 0.3rem; }

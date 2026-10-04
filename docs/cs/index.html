@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jozef Čambora — AI inženýr, Praha</title>
+<meta name="description" content="AI inženýr z Prahy. Dodávám produkční AI funkce agent-first a stavím infrastrukturu, díky které se na ně dá spolehnout. Projekty, zkušenosti, kontakt.">
+<link rel="canonical" href="https://cambora.cz/cs/">
+<link rel="alternate" hreflang="cs" href="https://cambora.cz/cs/">
+<link rel="alternate" hreflang="en" href="https://cambora.cz/">
+<link rel="alternate" hreflang="x-default" href="https://cambora.cz/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jozef Čambora — AI inženýr, Praha">
+<meta property="og:description" content="AI inženýr z Prahy. Dodávám produkční AI funkce agent-first a stavím infrastrukturu, díky které se na ně dá spolehnout. Projekty, zkušenosti, kontakt.">
+<meta property="og:url" content="https://cambora.cz/cs/">
+<meta property="og:image" content="https://cambora.cz/og.jpg">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141518" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jozef Čambora","jobTitle":"AI inženýr","url":"https://cambora.cz/","image":"https://cambora.cz/og.jpg","sameAs":["https://github.com/jozso39","https://www.linkedin.com/in/jozef-cambora"],"worksFor":{"@type":"Organization","name":"Medevio"},"address":{"@type":"PostalAddress","addressLocality":"Prague","addressCountry":"CZ"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Přeskočit na obsah</a>
+<header class="top">
+  <a class="brand" href="../cs/" aria-label="Jozef Čambora">JČ</a>
+  <nav aria-label="Navigace">
+    <a href="#now">Teď</a>
+    <a href="#work">Práce</a>
+    <a href="#before">Předtím</a>
+    <a href="#contact">Kontakt</a>
+    <a class="lang" href="../" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Jozef Čambora</h1>
+      <p class="role">AI inženýr · Praha</p>
+      <p class="intro">Stavím produkční software agent-first — většinu kódu píšou kódovací agenti, já vlastním architekturu, review a to, co jde ven — a stavím k tomu zázemí, díky kterému se na to dá spolehnout: konvence, skilly, runbooky a vyhodnocovací smyčky.</p>
+      <p class="intro">V Medeviu dodávám AI funkce do zdravotnického produktu, který používají ordinace v Česku a na Slovensku. Deset let v QA a release engineeringu před tím je důvod, proč to, co agenti vyrobí, měřím, místo abych tomu věřil.</p>
+      <p class="hero-links">
+        <a href="https://github.com/jozso39">GitHub</a>
+        <a href="https://www.linkedin.com/in/jozef-cambora">LinkedIn</a>
+        <a href="#contact">E-mail<span aria-hidden="true"> ↓</span></a>
+      </p>
+    </div>
+    <img class="photo" src="../jozef.jpg" width="480" height="480" alt="Jozef Čambora" fetchpriority="high">
+  </section>
+
+  <section id="now" class="block">
+    <p class="label">Teď</p>
+    <h2>AI inženýr v Medeviu <span class="since">od roku 2026</span></h2>
+    <p class="lead">Medevio je platforma pro komunikaci mezi pacientem a lékařem. Mám na starosti AI, která v ní běží — od promptu po nasazení.</p>
+    <ul class="bullets">
+      <li>AI funkce v produkci: návrhy odpovědí pro lékaře, shrnutí požadavků česky i slovensky, zpracování hovorů a SMS, přepis schůzek.</li>
+      <li>Agent-first vývoj napříč repozitáři týmu: konvence, skilly a spustitelné runbooky, proti kterým kódovací agenti pracují — s omezenými přístupy, takže agent může spustit datovou úlohu, ale nikdy nesáhne na ostrou ordinaci.</li>
+      <li>Vyhodnocení jako rozhodující krok: LLM soudci, holdout sady, testy významnosti. Změna jde ven, když měření ukáže, že pomohla — a končí, když ne.</li>
+      <li>Produkční TypeScript — Bun, Fastify, PostgreSQL — na AWS s Terraformem a GitLab CI.</li>
+    </ul>
+    <ul class="pills" aria-label="Technologie"><li>TypeScript</li><li>Bun</li><li>PostgreSQL</li><li>AWS</li><li>Langfuse</li><li>Claude Code</li><li>MCP</li></ul>
+  </section>
+
+  <section id="work" class="block">
+    <p class="label">Vybraná práce</p>
+    <h2>Co jsem postavil a provozuju</h2>
+    <p class="lead">Všechno tady je skutečné a moje. Většina z toho běží na Raspberry Pi u mě doma.</p>
+    <div class="projects">
+      <article class="project">
+        <header>
+          <h3>Huginn</h3>
+          <span class="status on">používám denně</span>
+        </header>
+        <p class="tagline">Jedna schránka pro všechny kanály, na které musím odpovídat.</p>
+        <p>Slack, Gmail, ClickUp, GitLab a Signal v jednom self-hostovaném dashboardu: odpovědět, rozepsat, reagovat nebo odškrtnout z jednoho místa, s třídicími pravidly, která se učí z toho, co označím jako důležité nebo spam. OAuth přes statickou relay stránku, tokeny šifrované na disku, Web Push na telefon.</p>
+        <ul class="pills" aria-label="Technologie"><li>Bun</li><li>Hono</li><li>SQLite</li><li>React</li><li>OAuth</li></ul>
+        <p><a class="more" href="https://github.com/jozso39/huginn">Zdrojový kód na GitHubu<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Jev model router pro Claude Code</h3>
+          <span class="status on">používám denně</span>
+        </header>
+        <p class="tagline">Levné tahy na levných modelech, velký model, když na tom záleží.</p>
+        <p>Směrování modelů pro Claude Code po jednotlivých tazích přes jeden klíč k OpenRouteru: lokální proxy každý požadavek zařadí, vybere model a každé rozhodnutí zaloguje. Routing bez uchovávání dat, záměrně.</p>
+        <ul class="pills" aria-label="Technologie"><li>TypeScript</li><li>OpenRouter</li><li>Claude Code</li></ul>
+        <p><a class="more" href="https://github.com/jozso39/jev-model-router-for-claude">Zdrojový kód na GitHubu<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Realiterier</h3>
+          <span class="status off">pozastaveno</span>
+        </header>
+        <p class="tagline">Hlídací pes na reality, který čte text inzerátu.</p>
+        <p>Stahuje inzeráty ze čtyř českých realitních portálů, normalizuje je do PostgreSQL a pomocí LLM vytahuje to, co portály nekategorizují — zvířata povolena, bez provize, cihla nebo panel. Slučuje stejný byt napříč portály, označuje podvodné vzorce a do pár minut posílá e-mailem odpovídající inzeráty. Předplacení hlídači přes Stripe.</p>
+        <p class="note">Od září 2026 uspáno na AWS.</p>
+        <ul class="pills" aria-label="Technologie"><li>Bun</li><li>PostgreSQL</li><li>Drizzle</li><li>SES</li><li>Stripe</li><li>hexagonální architektura</li></ul>
+      </article>
+      <article class="project">
+        <header>
+          <h3>kviff.ai</h3>
+          <span class="status off">sezónní</span>
+        </header>
+        <p class="tagline">AI průvodce festivalem v Karlových Varech.</p>
+        <p>Prochází program festivalu, obohacuje filmy z TMDB, OMDB a ČSFD, vytváří embeddingy a odpovídá v chatu: co vidět dnes večer, co se vejde mezi dvě projekce, jak daleko jsou sály od sebe. Rozpočty tokenů na uživatele i celkem drží účet předvídatelný.</p>
+        <p class="note">Běží během festivalu v červenci, mezi ročníky spí.</p>
+        <ul class="pills" aria-label="Technologie"><li>Bun</li><li>Mastra</li><li>PostgreSQL</li><li>Next.js</li><li>Crawlee</li><li>Langfuse</li></ul>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Deskohraní</h3>
+          <span class="status on">běží</span>
+        </header>
+        <p class="tagline">Přihlášky do dětského kroužku deskových her, který vedu.</p>
+        <p>Přihlašovací formulář za vlastní kostkovou captchou, kapacita, která formulář sama zavře, docházka po lekcích, články, export do CSV, noční zálohy. Node 22 bez závislostí s node:sqlite, v Dockeru za Cloudflare tunelem.</p>
+        <ul class="pills" aria-label="Technologie"><li>Node 22</li><li>node:sqlite</li><li>Docker</li><li>Cloudflare</li></ul>
+        <p><a class="more" href="https://deskohrani.cambora.cz/">Živý web<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Žižkostel</h3>
+          <span class="status wip">rozpracováno</span>
+        </header>
+        <p class="tagline">Web komunitního centra, který si redakce spravuje sama.</p>
+        <p>Payload CMS a Next.js pro pražské komunitní a kulturní centrum: akce, které podle data samy padají do archivu, česká administrace, koncepty a verze, dvojjazyčnost s českým fallbackem a role, které si editor nemůže povýšit.</p>
+        <ul class="pills" aria-label="Technologie"><li>Payload CMS</li><li>Next.js</li><li>SQLite</li><li>Docker</li></ul>
+        <p><a class="more" href="https://zizkostel.cambora.cz/cs">Demo<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Domácí server</h3>
+          <span class="status on">běží</span>
+        </header>
+        <p class="tagline">Raspberry Pi, které drží všechno pohromadě.</p>
+        <p>Asistent na Signalu s lokálním českým přepisem řeči, nástroje pro Gmail a Kalendář, soukromá rodinná aplikace a sourozenci tohoto webu — všechno v Dockeru za jedním Cloudflare tunelem, s nočními zálohami přes restic do S3 a hlídačem, který se ozve, jen když záloha zestárne. Přístup do AWS ohraničený IAM permission boundaries, každé volání auditované.</p>
+        <ul class="pills" aria-label="Technologie"><li>Raspberry Pi</li><li>Docker</li><li>systemd</li><li>Cloudflare</li><li>restic</li><li>AWS IAM</li></ul>
+      </article>
+    </div>
+    <p class="more-github">Další na GitHubu: MCP servery, příklady s LangGraphem, scrapery. <a href="https://github.com/jozso39">github.com/jozso39</a></p>
+  </section>
+
+  <section id="before" class="block">
+    <p class="label">Předtím</p>
+    <h2>Deset let, kdy jsem dělal software testovatelným</h2>
+    <dl class="timeline">
+      <div>
+        <dt><span class="when">2025 – 2026</span> <span class="where">ABUGO Group</span></dt>
+        <dd><strong>AI Automation Engineer</strong> — AI agenti pro interní provoz v n8n, Make a TypeScriptu: agent pro firemní AI politiku, klasifikace webů, náborový bot pro Slack.</dd>
+      </div>
+      <div>
+        <dt><span class="when">2020 – 2025</span> <span class="where">Make (Celonis)</span></dt>
+        <dd><strong>Developer Experience Engineer, předtím QA Lead</strong> — Release management a automatizované nasazování instancí. Rozjel jsem a vedl celofiremní shift-left v kvalitě.</dd>
+      </div>
+      <div>
+        <dt><span class="when">2016 – 2020</span> <span class="where">Rohlík.cz · Zonky.cz · Accenture</span></dt>
+        <dd><strong>QA Engineer, Test Engineering Analyst</strong> — Automatizace testů pro online supermarket, fintech a enterprise klienty.</dd>
+      </div>
+    </dl>
+    <p class="certs">AI Developer (robot_dreams, 2025) · CS50 (Harvard / edX, 2020)</p>
+  </section>
+
+  <section id="contact" class="block">
+    <p class="label">Kontakt</p>
+    <h2>Ozvěte se</h2>
+    <p class="lead">Nabídka práce, projekt nebo otázka k čemukoli výš — napište mi. Adresa je za malým důkazem, že nejste robot sbírající e-maily:</p>
+    <div class="hacek" id="hacek" data-u="jozef" data-d="cambora" data-t="cz">
+      <p class="hint" id="hint">Dejte mému jménu háček — přetáhněte ˇ na C, nebo na C prostě klepněte.</p>
+      <div class="stage">
+        <span class="slot"><span class="caron" id="caron" aria-hidden="true" title="ˇ">ˇ</span></span>
+        <span class="word">Jozef <button type="button" class="target" id="target" aria-label="Přidat háček na C a zobrazit e-mailovou adresu" aria-describedby="hint" aria-pressed="false">C</button>ambora</span>
+      </div>
+      <div class="reveal" id="reveal" hidden>
+        <p class="success">Děkuji. Takhle se to píše.</p>
+        <p class="addr"><a id="mail" href="#contact"></a> <button type="button" id="copy" data-copied="Zkopírováno">Kopírovat</button></p>
+      </div>
+      <noscript><p class="note">Bez JavaScriptu: jozef zavináč cambora tečka cz.</p></noscript>
+    </div>
+    <p class="elsewhere">Nebo mě najdete na <a href="https://www.linkedin.com/in/jozef-cambora">LinkedIn</a> · <a href="https://github.com/jozso39">GitHub</a>.</p>
+  </section>
+</main>
+
+<footer class="bottom">
+  <p>Čisté HTML a CSS, žádný framework, hostováno na GitHub Pages. <a href="https://github.com/jozso39/cambora.cz">Zdrojový kód</a>.</p>
+  <p>Jozef Čambora · Praha · 2026 · <a href="../" hreflang="en" lang="en">English</a></p>
+</footer>
+<script src="../site.js" defer></script>
+</body>
+</html>

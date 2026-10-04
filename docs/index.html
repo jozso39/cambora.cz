@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jozef Čambora — AI Engineer, Prague</title>
+<meta name="description" content="AI engineer in Prague. I ship production AI features agent-first and build the harness that makes them reliable. Projects, background, contact.">
+<link rel="canonical" href="https://cambora.cz/">
+<link rel="alternate" hreflang="en" href="https://cambora.cz/">
+<link rel="alternate" hreflang="cs" href="https://cambora.cz/cs/">
+<link rel="alternate" hreflang="x-default" href="https://cambora.cz/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jozef Čambora — AI Engineer, Prague">
+<meta property="og:description" content="AI engineer in Prague. I ship production AI features agent-first and build the harness that makes them reliable. Projects, background, contact.">
+<meta property="og:url" content="https://cambora.cz/">
+<meta property="og:image" content="https://cambora.cz/og.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141518" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jozef Čambora","jobTitle":"AI Engineer","url":"https://cambora.cz/","image":"https://cambora.cz/og.jpg","sameAs":["https://github.com/jozso39","https://www.linkedin.com/in/jozef-cambora"],"worksFor":{"@type":"Organization","name":"Medevio"},"address":{"@type":"PostalAddress","addressLocality":"Prague","addressCountry":"CZ"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="./" aria-label="Jozef Čambora">JČ</a>
+  <nav aria-label="Navigation">
+    <a href="#now">Now</a>
+    <a href="#work">Work</a>
+    <a href="#before">Before</a>
+    <a href="#contact">Contact</a>
+    <a class="lang" href="./cs/" hreflang="cs" lang="cs">Česky</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Jozef Čambora</h1>
+      <p class="role">AI Engineer · Prague</p>
+      <p class="intro">I build production software agent-first — coding agents write most of the code, I own the architecture, the review and what ships — and I build the harness that makes that reliable: conventions, skills, runbooks and evaluation loops.</p>
+      <p class="intro">At Medevio I ship AI features into a healthcare product used by clinics in Czechia and Slovakia. Ten years in QA and release engineering before that is why I measure what agents produce instead of trusting it.</p>
+      <p class="hero-links">
+        <a href="https://github.com/jozso39">GitHub</a>
+        <a href="https://www.linkedin.com/in/jozef-cambora">LinkedIn</a>
+        <a href="#contact">E-mail<span aria-hidden="true"> ↓</span></a>
+      </p>
+    </div>
+    <img class="photo" src="./jozef.jpg" width="480" height="480" alt="Jozef Čambora" fetchpriority="high">
+  </section>
+
+  <section id="now" class="block">
+    <p class="label">Now</p>
+    <h2>AI Engineer at Medevio <span class="since">since 2026</span></h2>
+    <p class="lead">Medevio is a patient–doctor communication platform. I own the AI inside it, from prompt to rollout.</p>
+    <ul class="bullets">
+      <li>AI features in production: drafted replies for doctors, request summaries in Czech and Slovak, call and SMS processing, meeting transcription.</li>
+      <li>Agent-first delivery across the team’s repositories: conventions, skills and executable runbooks that coding agents work against — with scoped credentials, so an agent can run a data job but never touch a live clinic.</li>
+      <li>Evaluation as the deciding step: LLM judges, holdout sets and significance tests. A change ships when the measurement says it helped, and gets killed when it doesn’t.</li>
+      <li>Production TypeScript — Bun, Fastify, PostgreSQL — on AWS with Terraform and GitLab CI.</li>
+    </ul>
+    <ul class="pills" aria-label="Stack"><li>TypeScript</li><li>Bun</li><li>PostgreSQL</li><li>AWS</li><li>Langfuse</li><li>Claude Code</li><li>MCP</li></ul>
+  </section>
+
+  <section id="work" class="block">
+    <p class="label">Selected work</p>
+    <h2>Things I built and run</h2>
+    <p class="lead">Everything here is real and mine. Most of it runs on a Raspberry Pi at home.</p>
+    <div class="projects">
+      <article class="project">
+        <header>
+          <h3>Huginn</h3>
+          <span class="status on">in daily use</span>
+        </header>
+        <p class="tagline">One inbox for every channel I have to answer.</p>
+        <p>Slack, Gmail, ClickUp, GitLab and Signal in one self-hosted dashboard: reply, draft, react or mark done from one place, with triage rules that learn from what I mark important or spam. OAuth through a static relay page, tokens sealed at rest, Web Push to the phone.</p>
+        <ul class="pills" aria-label="Stack"><li>Bun</li><li>Hono</li><li>SQLite</li><li>React</li><li>OAuth</li></ul>
+        <p><a class="more" href="https://github.com/jozso39/huginn">Source on GitHub<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Jev model router for Claude Code</h3>
+          <span class="status on">in daily use</span>
+        </header>
+        <p class="tagline">Cheap turns on cheap models, the big model when it matters.</p>
+        <p>Per-turn model routing for Claude Code through one OpenRouter key: a local proxy classifies each request, picks the model and logs every decision. Zero-retention routing by design.</p>
+        <ul class="pills" aria-label="Stack"><li>TypeScript</li><li>OpenRouter</li><li>Claude Code</li></ul>
+        <p><a class="more" href="https://github.com/jozso39/jev-model-router-for-claude">Source on GitHub<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Realiterier</h3>
+          <span class="status off">paused</span>
+        </header>
+        <p class="tagline">A real-estate watchdog that reads the ad text.</p>
+        <p>Scrapes four Czech property portals, normalises ads into PostgreSQL and extracts with an LLM what portals don’t categorise — pets allowed, no commission, brick or panel. Groups the same flat across portals, flags scam patterns and e-mails matching ads within minutes. Prepaid watchdogs through Stripe.</p>
+        <p class="note">Hibernated on AWS since September 2026.</p>
+        <ul class="pills" aria-label="Stack"><li>Bun</li><li>PostgreSQL</li><li>Drizzle</li><li>SES</li><li>Stripe</li><li>hexagonal</li></ul>
+      </article>
+      <article class="project">
+        <header>
+          <h3>kviff.ai</h3>
+          <span class="status off">seasonal</span>
+        </header>
+        <p class="tagline">An AI guide to the Karlovy Vary film festival.</p>
+        <p>Crawls the festival programme, enriches films from TMDB, OMDB and ČSFD, embeds them and answers in chat: what to see tonight, what fits between two screenings, how far the venues are from each other. Per-user and global token budgets keep the bill predictable.</p>
+        <p class="note">Runs during the festival in July; hibernated between editions.</p>
+        <ul class="pills" aria-label="Stack"><li>Bun</li><li>Mastra</li><li>PostgreSQL</li><li>Next.js</li><li>Crawlee</li><li>Langfuse</li></ul>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Deskohraní</h3>
+          <span class="status on">live</span>
+        </header>
+        <p class="tagline">Registrations for the kids’ board-game club I run.</p>
+        <p>Sign-up form behind a self-made dice captcha, a capacity that closes the form itself, attendance per lesson, articles, CSV export, nightly backups. Zero-dependency Node 22 with node:sqlite, in Docker behind a Cloudflare tunnel.</p>
+        <ul class="pills" aria-label="Stack"><li>Node 22</li><li>node:sqlite</li><li>Docker</li><li>Cloudflare</li></ul>
+        <p><a class="more" href="https://deskohrani.cambora.cz/">Live site (Czech)<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>Žižkostel</h3>
+          <span class="status wip">in progress</span>
+        </header>
+        <p class="tagline">A community centre’s website its editors can run themselves.</p>
+        <p>Payload CMS and Next.js for a Prague community and cultural centre: events that fall into the archive by date, a Czech admin, drafts and versions, bilingual with Czech fallback, and roles an editor cannot escalate.</p>
+        <ul class="pills" aria-label="Stack"><li>Payload CMS</li><li>Next.js</li><li>SQLite</li><li>Docker</li></ul>
+        <p><a class="more" href="https://zizkostel.cambora.cz/cs">Demo (Czech)<span aria-hidden="true"> →</span></a></p>
+      </article>
+      <article class="project">
+        <header>
+          <h3>The home server</h3>
+          <span class="status on">running</span>
+        </header>
+        <p class="tagline">A Raspberry Pi that holds everything together.</p>
+        <p>A Signal assistant with local Czech speech-to-text, Gmail and Calendar tooling, a private family app and this site’s siblings — all in Docker behind one Cloudflare tunnel, with nightly restic backups to S3 and a watchdog that only speaks when a backup goes stale. AWS access bounded by IAM permission boundaries, every call audited.</p>
+        <ul class="pills" aria-label="Stack"><li>Raspberry Pi</li><li>Docker</li><li>systemd</li><li>Cloudflare</li><li>restic</li><li>AWS IAM</li></ul>
+      </article>
+    </div>
+    <p class="more-github">More on GitHub: MCP servers, LangGraph examples, scrapers. <a href="https://github.com/jozso39">github.com/jozso39</a></p>
+  </section>
+
+  <section id="before" class="block">
+    <p class="label">Before</p>
+    <h2>Ten years of making software testable</h2>
+    <dl class="timeline">
+      <div>
+        <dt><span class="when">2025 – 2026</span> <span class="where">ABUGO Group</span></dt>
+        <dd><strong>AI Automation Engineer</strong> — AI agents for internal operations in n8n, Make and TypeScript: an AI-policy agent, website classification, a recruitment bot for Slack.</dd>
+      </div>
+      <div>
+        <dt><span class="when">2020 – 2025</span> <span class="where">Make (Celonis)</span></dt>
+        <dd><strong>Developer Experience Engineer, before that QA Lead</strong> — Release management and automated instance deployment. Started and drove the company-wide shift-left on quality.</dd>
+      </div>
+      <div>
+        <dt><span class="when">2016 – 2020</span> <span class="where">Rohlík.cz · Zonky.cz · Accenture</span></dt>
+        <dd><strong>QA Engineer, Test Engineering Analyst</strong> — Test automation for an online grocer, a fintech and enterprise clients.</dd>
+      </div>
+    </dl>
+    <p class="certs">AI Developer (robot_dreams, 2025) · CS50 (Harvard / edX, 2020)</p>
+  </section>
+
+  <section id="contact" class="block">
+    <p class="label">Contact</p>
+    <h2>Say hello</h2>
+    <p class="lead">Hiring, a project, or a question about any of this — write to me. The address is behind a small proof that you are not a robot harvesting e-mails:</p>
+    <div class="hacek" id="hacek" data-u="jozef" data-d="cambora" data-t="cz">
+      <p class="hint" id="hint">Give my name its háček — drag the ˇ onto the C, or just tap the C.</p>
+      <div class="stage">
+        <span class="slot"><span class="caron" id="caron" aria-hidden="true" title="ˇ">ˇ</span></span>
+        <span class="word">Jozef <button type="button" class="target" id="target" aria-label="Add the háček to the C and reveal the e-mail address" aria-describedby="hint" aria-pressed="false">C</button>ambora</span>
+      </div>
+      <div class="reveal" id="reveal" hidden>
+        <p class="success">Thank you. That is how it is written.</p>
+        <p class="addr"><a id="mail" href="#contact"></a> <button type="button" id="copy" data-copied="Copied">Copy</button></p>
+      </div>
+      <noscript><p class="note">Without JavaScript: jozef at cambora dot cz.</p></noscript>
+    </div>
+    <p class="elsewhere">Or find me on <a href="https://www.linkedin.com/in/jozef-cambora">LinkedIn</a> · <a href="https://github.com/jozso39">GitHub</a>.</p>
+  </section>
+</main>
+
+<footer class="bottom">
+  <p>Plain HTML and CSS, no framework, hosted on GitHub Pages. <a href="https://github.com/jozso39/cambora.cz">Source</a>.</p>
+  <p>Jozef Čambora · Prague · 2026 · <a href="./cs/" hreflang="cs" lang="cs">Česky</a></p>
+</footer>
+<script src="./site.js" defer></script>
+</body>
+</html>
