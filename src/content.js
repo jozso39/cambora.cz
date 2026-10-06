@@ -60,14 +60,14 @@ export const content = {
     },
     work: {
       k: 'things I run',
-      lead: 'Real, running, and mine. Most of it lives on a Raspberry Pi in my flat. The line under each one says what the build script found when it checked the link.',
+      lead: 'Real, running, and mine. Much of it lives on a Raspberry Pi in my flat. The line under each one says what the build script found when it checked the link.',
       projects: [
         {
           title: 'Huginn',
           when: 'since sep 2026',
           status: 'in daily use',
-          text: 'One inbox for Slack, Gmail, ClickUp, GitLab and Signal. I was tired of five apps asking for attention, so I wrote one dashboard where I can reply, draft, react or mark things done, and it learns from what I mark as spam or important. Runs on the Pi, reachable only on my tailnet, with tokens encrypted at rest.',
-          stack: 'bun · hono · sqlite · react',
+          text: 'One inbox for Slack, Gmail, ClickUp, GitLab and Signal. I was tired of five apps asking for attention, so I wrote one dashboard where I can reply, draft, react or mark things done, and it learns from what I mark as spam or important. It started on the Pi and is now a Mac app, with tokens encrypted at rest.',
+          stack: 'bun · hono · sqlite · react · tauri',
           link: { href: links.huginn, label: 'source on GitHub' },
         },
         {
@@ -113,7 +113,7 @@ export const content = {
           title: 'The Pi itself',
           when: 'since sep 2026',
           status: 'running',
-          text: 'A Raspberry Pi 5 in my flat hosts most of the above, plus a Signal assistant with local Czech speech-to-text, a private family app, and nightly encrypted backups to S3. A watchdog speaks up only when a backup goes stale, which is the one kind of monitoring I trust.',
+          text: 'A Raspberry Pi 5 in my flat hosts the sites above, plus a Signal assistant with local Czech speech-to-text, a private family app, and nightly encrypted backups to S3. A watchdog speaks up only when a backup goes stale, which is the one kind of monitoring I trust.',
           stack: 'raspberry pi · docker · systemd · cloudflare tunnel · restic',
         },
       ],
@@ -199,14 +199,14 @@ export const content = {
     },
     work: {
       k: 'co mi běží',
-      lead: 'Skutečné, běžící a moje. Většina toho bydlí na Raspberry Pi u mě v bytě. Řádek pod každou položkou říká, co build skript zjistil, když odkaz zkontroloval.',
+      lead: 'Skutečné, běžící a moje. Hodně z toho bydlí na Raspberry Pi u mě v bytě. Řádek pod každou položkou říká, co build skript zjistil, když odkaz zkontroloval.',
       projects: [
         {
           title: 'Huginn',
           when: 'od září 2026',
           status: 'používám denně',
-          text: 'Jedna schránka pro Slack, Gmail, ClickUp, GitLab a Signal. Unavilo mě pět aplikací, které se hlásí o pozornost, tak jsem napsal jeden dashboard, kde odpovím, rozepíšu, zareaguju nebo odškrtnu, a který se učí z toho, co označím jako spam nebo důležité. Běží na Pi, jen v mé tailnet síti, tokeny šifrované na disku.',
-          stack: 'bun · hono · sqlite · react',
+          text: 'Jedna schránka pro Slack, Gmail, ClickUp, GitLab a Signal. Unavilo mě pět aplikací, které se hlásí o pozornost, tak jsem napsal jeden dashboard, kde odpovím, rozepíšu, zareaguju nebo odškrtnu, a který se učí z toho, co označím jako spam nebo důležité. Začal na Pi, dnes je to aplikace pro Mac, tokeny šifrované na disku.',
+          stack: 'bun · hono · sqlite · react · tauri',
           link: { href: links.huginn, label: 'zdroják na GitHubu' },
         },
         {
@@ -252,7 +252,7 @@ export const content = {
           title: 'Samotné Pi',
           when: 'od září 2026',
           status: 'běží',
-          text: 'Raspberry Pi 5 u mě v bytě hostuje většinu věcí výš, k tomu asistenta na Signalu s lokálním českým přepisem řeči, soukromou rodinnou aplikaci a noční šifrované zálohy do S3. Hlídač se ozve, jen když záloha zestárne, což je jediný druh monitoringu, kterému věřím.',
+          text: 'Raspberry Pi 5 u mě v bytě hostuje weby výš, k tomu asistenta na Signalu s lokálním českým přepisem řeči, soukromou rodinnou aplikaci a noční šifrované zálohy do S3. Hlídač se ozve, jen když záloha zestárne, což je jediný druh monitoringu, kterému věřím.',
           stack: 'raspberry pi · docker · systemd · cloudflare tunnel · restic',
         },
       ],
