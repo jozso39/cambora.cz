@@ -1,50 +1,53 @@
-/* cambora.cz — one stylesheet, no framework.
-   Colour lives in a handful of tokens; the rest is type and whitespace. */
+/* cambora.cz
+   One mark on the page: the háček, in proofreader's red. A mono gutter on the
+   left carries dates and status like a ledger; the prose sits on the right.
+   No cards, no badges. Self-hosted display face, system fonts for the rest. */
+
+@font-face {
+  font-family: "Bricolage";
+  src: url(fonts/bricolage-latin.woff2) format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Bricolage";
+  src: url(fonts/bricolage-latin-ext.woff2) format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
 :root {
   color-scheme: light dark;
-  --bg: #faf7f2;
-  --bg-2: #f2ece4;
-  --ink: #1d1b18;
-  --ink-2: #5d5850;
-  --line: #e3dcd1;
-  --accent: #b8441f;
-  --accent-ink: #9a3716;
-  --accent-soft: #f7e3d9;
-  --on: #2d6f48;
-  --on-soft: #dff0e5;
-  --wip: #8a5f00;
-  --wip-soft: #f8ecc9;
-  --off: #6b665e;
-  --off-soft: #ebe6df;
-  --shadow: 0 1px 2px rgba(29, 27, 24, 0.06), 0 8px 24px rgba(29, 27, 24, 0.06);
-  --measure: 46rem;
+  --paper: #f4f2ed;
+  --paper-2: #ebe8e1;
+  --ink: #191917;
+  --ink-2: #6b685f;
+  --line: #d8d4ca;
+  --red: #c8102e;
+  --red-ink: #a30d25;
+  --display: "Bricolage", ui-sans-serif, system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --measure: 38rem;
+  --gutter: 11rem;
+  --gap: 2.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #141518;
-    --bg-2: #1d1f24;
-    --ink: #ebe7e1;
-    --ink-2: #a9a49c;
-    --line: #2c2f36;
-    --accent: #f08a5e;
-    --accent-ink: #f6a784;
-    --accent-soft: #3a2219;
-    --on: #86d6a1;
-    --on-soft: #1b3326;
-    --wip: #e7c35f;
-    --wip-soft: #3a3115;
-    --off: #9d988f;
-    --off-soft: #262930;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+    --paper: #151513;
+    --paper-2: #1e1d1a;
+    --ink: #e8e4dc;
+    --ink-2: #9c978c;
+    --line: #2e2c28;
+    --red: #f0605f;
+    --red-ink: #f58d8c;
   }
 }
 
 * { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -52,298 +55,210 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--paper);
   color: var(--ink);
   font: 17px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
 }
 
-a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
-a:hover { color: var(--accent); }
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 2px;
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
 }
+a:hover { color: var(--red-ink); }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
 
-h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; margin: 0; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.1; letter-spacing: -0.01em; font-weight: 700; }
 p { margin: 0 0 1rem; }
-ul { margin: 0; padding: 0; }
+
+.meta, .gutter, .top, .role { font-family: var(--mono); font-size: 0.82rem; line-height: 1.55; }
+.meta { color: var(--ink-2); }
+.meta a { color: var(--ink); }
+.chk { white-space: nowrap; }
 
 .skip {
-  position: absolute; left: 1rem; top: -4rem;
-  background: var(--accent); color: #fff; padding: 0.5rem 0.75rem; border-radius: 0.4rem;
-  z-index: 100;
+  position: absolute; left: 1rem; top: -4rem; z-index: 100;
+  background: var(--red); color: #fff; padding: 0.5rem 0.75rem; border-radius: 0.3rem;
 }
 .skip:focus { top: 1rem; }
 
-/* ---- top bar ---------------------------------------------------------- */
+/* ---- top line ------------------------------------------------------------ */
 
-.top {
-  max-width: var(--measure);
+.top, .page, .bottom {
+  max-width: calc(var(--gutter) + var(--gap) + var(--measure));
   margin: 0 auto;
-  padding: 1.1rem 1rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.top {
+  padding-top: 1.1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
 }
-.brand {
+.brand { text-decoration: none; color: var(--ink-2); }
+.top nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; }
+.top nav a { text-decoration: none; color: var(--ink-2); }
+.top nav a:hover { color: var(--red-ink); }
+.top nav .lang { color: var(--ink); border-bottom: 1.5px solid var(--red); }
+
+/* ---- hero ----------------------------------------------------------------- */
+
+.page { padding-bottom: 3rem; }
+.hero { position: relative; padding: 3.2rem 0 1.2rem; }
+.hero h1 {
+  font-size: clamp(2.6rem, 9.5vw, 4.9rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
-  text-decoration: none;
-  color: var(--accent);
-  font-size: 1.1rem;
-  border: 2px solid var(--accent);
-  border-radius: 0.5rem;
-  padding: 0.1rem 0.45rem;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  margin-bottom: 0.7rem;
 }
-.top nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.95rem; }
-.top nav a { color: var(--ink-2); text-decoration: none; }
-.top nav a:hover { color: var(--accent); }
-.top nav .lang {
-  color: var(--accent-ink);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.05rem 0.6rem;
-}
-
-/* ---- layout ----------------------------------------------------------- */
-
-main { max-width: var(--measure); margin: 0 auto; padding: 0 1rem 3rem; }
-
-.block { padding-top: 3.5rem; }
-
-.label {
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 0.6rem;
-}
-h2 { font-size: 1.75rem; margin-bottom: 0.9rem; }
-.since { font-size: 1rem; font-weight: 500; color: var(--ink-2); white-space: nowrap; }
-.lead { font-size: 1.1rem; color: var(--ink-2); max-width: 40rem; }
-
-/* ---- hero ------------------------------------------------------------- */
-
-.hero {
-  padding-top: 3rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-.hero h1 { font-size: clamp(2.3rem, 7vw, 3.2rem); font-weight: 800; }
-.role { color: var(--accent); font-weight: 600; font-size: 1.15rem; margin: 0.35rem 0 1.4rem; }
-.intro { font-size: 1.1rem; max-width: 40rem; }
-.hero-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
-.hero-links a {
-  text-decoration: none;
-  border: 1px solid var(--line);
-  background: var(--bg-2);
-  border-radius: 999px;
-  padding: 0.35rem 0.95rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-.hero-links a:hover { border-color: var(--accent); color: var(--accent); }
+/* If the name has to wrap, it wraps at the space, never inside the surname. */
+.nw { white-space: nowrap; }
+/* A red Č underneath, the ink C on top: only the háček shows red, whatever the font. */
+.ch { position: relative; display: inline-block; }
+.ch .under { color: var(--red); }
+.ch .over { position: absolute; left: 0; top: 0; color: var(--ink); }
+.role { color: var(--ink-2); margin-bottom: 1.7rem; }
+.intro { max-width: var(--measure); font-size: 1.07rem; }
+.links { margin-top: 1.3rem; }
 .photo {
-  width: 7.5rem; height: 7.5rem;
-  border-radius: 50%;
+  float: right;
+  width: 5.5rem; height: 5.5rem;
   object-fit: cover;
-  box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--accent-soft);
-  order: -1;
-}
-@media (min-width: 640px) {
-  .hero { grid-template-columns: 1fr auto; gap: 2.5rem; }
-  .photo { width: 10rem; height: 10rem; order: 0; margin-top: 0.5rem; }
+  margin: 0.2rem 0 1rem 1rem;
+  border: 3px solid var(--paper);
+  outline: 1px solid var(--line);
+  transform: rotate(-2.5deg);
 }
 
-/* ---- now -------------------------------------------------------------- */
+/* ---- the ledger ----------------------------------------------------------- */
 
-.bullets { list-style: none; margin: 0 0 1.25rem; }
-.bullets li { position: relative; padding-left: 1.4rem; margin-bottom: 0.7rem; }
-.bullets li::before {
-  content: "";
-  position: absolute; left: 0; top: 0.7em;
-  width: 0.55rem; height: 0.55rem;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.pills { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.pills li {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--ink-2);
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.15rem 0.65rem;
-}
-
-/* ---- work ------------------------------------------------------------- */
-
-.projects { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
-.project {
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
-  border-radius: 0.75rem;
-  padding: 1.25rem 1.25rem 1rem;
-  box-shadow: var(--shadow);
-}
-.project header {
-  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
-  gap: 0.4rem 1rem; margin-bottom: 0.35rem;
-}
-.project h3 { font-size: 1.25rem; }
-.status {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 999px;
-  padding: 0.15rem 0.6rem;
-  white-space: nowrap;
-}
-.status.on { color: var(--on); background: var(--on-soft); }
-.status.wip { color: var(--wip); background: var(--wip-soft); }
-.status.off { color: var(--off); background: var(--off-soft); }
-.tagline { font-weight: 600; margin-bottom: 0.5rem; }
-.note { color: var(--ink-2); font-size: 0.95rem; }
-.project .pills { margin: 0.25rem 0 0.9rem; }
-.project .pills li { background: var(--bg); }
-.project p:last-child { margin-bottom: 0; }
-.more { font-weight: 600; }
-.more-github { margin-top: 1.5rem; color: var(--ink-2); }
-
-/* ---- before ----------------------------------------------------------- */
-
-.timeline { margin: 0; }
-.timeline > div {
+.row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.15rem 1.5rem;
-  padding: 1rem 0;
+  gap: 0.35rem var(--gap);
+  padding: 1.5rem 0;
   border-top: 1px solid var(--line);
 }
-.timeline > div:last-child { border-bottom: 1px solid var(--line); }
-.timeline dt { color: var(--ink-2); font-size: 0.95rem; }
-.timeline .when { font-variant-numeric: tabular-nums; white-space: nowrap; }
-.timeline .where { display: block; color: var(--ink); font-weight: 600; }
-.timeline dd { margin: 0; }
-@media (min-width: 640px) {
-  .timeline > div { grid-template-columns: 11rem 1fr; }
+.row.first { margin-top: 1.5rem; }
+.gutter { color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 0.1rem 0.8rem; align-content: start; }
+.gutter .k {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
 }
-.certs { color: var(--ink-2); font-size: 0.95rem; margin-top: 1rem; }
+.body { min-width: 0; max-width: var(--measure); }
+.body h2 { font-size: 1.75rem; margin-bottom: 0.7rem; }
+.body h3 { font-size: 1.22rem; margin-bottom: 0.4rem; }
+.body p:last-child { margin-bottom: 0; }
+.body .meta { margin-top: 0.35rem; }
+.lead { color: var(--ink-2); }
+.rolename { font-weight: 600; }
 
-/* ---- contact / the háček puzzle --------------------------------------- */
-
-.hacek {
-  margin: 1.5rem 0;
-  padding: 1.5rem 1.25rem;
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: 0.75rem;
-  box-shadow: var(--shadow);
+@media (min-width: 860px) {
+  .row { grid-template-columns: var(--gutter) minmax(0, var(--measure)); }
+  .gutter { flex-direction: column; gap: 0.1rem; padding-top: 0.2rem; }
+  .hero { padding-left: calc(var(--gutter) + var(--gap)); }
+  .photo {
+    position: absolute; left: 0; top: 3.9rem;
+    float: none; margin: 0;
+    width: 7.5rem; height: 7.5rem;
+  }
 }
-.hint { color: var(--ink-2); margin-bottom: 1.25rem; }
+
+/* ---- the háček puzzle ----------------------------------------------------- */
+
+.hacek { margin: 1.2rem 0 1.2rem; }
+.hint { margin-bottom: 0.9rem; }
 .stage {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
-  margin: 0 0 0.5rem;
-  min-height: 3.5rem;
+  gap: 1rem 1.6rem;
+  margin: 0 0 0.4rem;
+  min-height: 3.2rem;
 }
 /* The slot keeps the caron's place in the row while the caron itself is
-   position:fixed under the pointer — otherwise the word would jump left the
-   moment a drag starts and the C would move away from the visitor's aim. */
-.slot { flex: none; width: 3rem; height: 3rem; }
+   position:fixed under the pointer, so the word never jumps. */
+.slot { flex: none; width: 2.8rem; height: 2.8rem; }
 .solved .slot { display: none; }
 .caron {
   display: inline-grid;
   place-items: center;
-  width: 3rem; height: 3rem;
-  font-size: 2.4rem;
+  width: 2.8rem; height: 2.8rem;
+  font-family: var(--display);
+  font-size: 2.3rem;
+  font-weight: 800;
   line-height: 1;
-  color: var(--accent);
-  background: var(--bg);
-  border: 2px dashed var(--accent);
-  border-radius: 0.6rem;
+  color: var(--red);
+  border: 1.5px dashed var(--red);
+  border-radius: 0.35rem;
   cursor: grab;
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+  background: var(--paper);
 }
-.caron.dragging {
-  position: fixed;
-  z-index: 20;
-  cursor: grabbing;
-  transition: none;
-  box-shadow: var(--shadow);
-}
+.caron.dragging { position: fixed; z-index: 20; cursor: grabbing; }
 .caron[hidden] { display: none; }
 .word {
-  font-size: clamp(2rem, 8vw, 2.6rem);
+  font-family: var(--display);
+  font-size: clamp(2rem, 8vw, 2.7rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   white-space: nowrap;
 }
 .target {
+  position: relative;
   font: inherit;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border: 2px dashed var(--accent);
-  border-radius: 0.4rem;
-  padding: 0 0.1em;
-  margin: 0 0.04em;
-  line-height: 1.1;
-  cursor: pointer;
-  transition: transform 0.15s, background 0.2s;
-}
-.target.over, .target:hover { transform: scale(1.12); }
-.solved .target {
-  border-style: solid;
+  color: var(--ink);
   background: transparent;
-  cursor: default;
-  animation: settle 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 0;
+  border-bottom: 2px dashed var(--red);
+  padding: 0 0.04em;
+  margin: 0 0.02em;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s;
 }
-@keyframes settle {
-  0% { transform: scale(1.25); }
-  100% { transform: scale(1); }
-}
+.target.over, .target:hover { transform: scale(1.1); }
+.solved .target { border-bottom-color: transparent; cursor: default; animation: settle 0.45s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.solved .target .under { color: var(--red); }
+.solved .target .over { position: absolute; left: 0.04em; top: 0; color: var(--ink); }
+@keyframes settle { from { transform: scale(1.2); } to { transform: scale(1); } }
 .reveal[hidden] { display: none; }
-.success { color: var(--ink-2); margin: 0.75rem 0 0.4rem; }
-.addr { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; margin: 0; }
-.addr a { font-size: 1.3rem; font-weight: 700; word-break: break-all; }
+.success { color: var(--ink-2); margin: 0.6rem 0 0.3rem; }
+.addr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.9rem; margin: 0; }
+.addr a { font-family: var(--display); font-size: 1.35rem; font-weight: 700; word-break: break-all; }
 .addr button {
   font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink);
-  background: var(--bg);
+  color: var(--ink-2);
+  background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.25rem 0.8rem;
+  padding: 0.15rem 0.7rem;
   cursor: pointer;
 }
-.addr button:hover { border-color: var(--accent); color: var(--accent); }
-.elsewhere { color: var(--ink-2); }
+.addr button:hover { border-color: var(--red); color: var(--red-ink); }
 
-/* ---- footer ----------------------------------------------------------- */
+/* ---- footer --------------------------------------------------------------- */
 
 .bottom {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: 1.5rem 1rem 2.5rem;
+  padding-top: 1.4rem;
+  padding-bottom: 2.5rem;
   border-top: 1px solid var(--line);
   color: var(--ink-2);
-  font-size: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
-.bottom p { margin-bottom: 0.3rem; }
+.bottom p { margin-bottom: 0.25rem; }
+.bottom a { color: var(--ink); }

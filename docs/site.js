@@ -20,7 +20,9 @@
     if (solved) return
     solved = true
     box.classList.add('solved')
-    target.textContent = 'Č'
+    // Same trick as the name in the header: red Č underneath, ink C on top,
+    // so only the háček itself turns red.
+    target.innerHTML = '<span class="under">Č</span><span class="over" aria-hidden="true">C</span>'
     target.setAttribute('aria-pressed', 'true')
     target.classList.remove('over')
     caron.hidden = true
@@ -31,7 +33,7 @@
     mail.focus({ preventScroll: true })
   }
 
-  // Tap, click, Enter or Space on the C — the keyboard path is the button itself.
+  // Tap, click, Enter or Space on the C: the keyboard path is the button itself.
   target.addEventListener('click', solve)
 
   // Dragging the ˇ. Pointer events cover mouse, touch and pen alike.

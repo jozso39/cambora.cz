@@ -25,6 +25,14 @@ git commit -am "…" && git push     # Pages deploys from the branch, ~1 minute
 nothing builds anywhere else. Always run the build before committing, never edit
 `docs/` by hand.
 
+The build fetches every project link and writes the result under the project
+("checked 6 Oct 2026 · 200 OK"), plus the build date in the footer. A link that
+does not answer is shown as such rather than hidden, so look at the build output
+before pushing. The build also warns if a long dash sneaks into the content.
+
+Fonts: Bricolage Grotesque (SIL Open Font License), self-hosted in
+`src/assets/fonts/`, used for headings only. No third-party requests anywhere.
+
 ## The e-mail puzzle
 
 The address is not in the HTML. `site.js` assembles it from `data-*` attributes
