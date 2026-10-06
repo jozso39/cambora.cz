@@ -33,7 +33,7 @@ export const content = {
     otherLabel: 'česky',
     title: 'Jozef Čambora, AI engineer in Prague',
     description:
-      'Ten years in QA, now building and measuring AI features at Medevio. What I run, where I worked, how to reach me.',
+      'QA and release engineering first, now building and measuring AI features at Medevio. What I run, where I worked, how to reach me.',
     skip: 'Skip to content',
     navLabel: 'Sections',
     nav: { now: 'now', work: 'things I run', before: 'before', contact: 'write me' },
@@ -42,7 +42,7 @@ export const content = {
       role: 'AI engineer · Prague · at Medevio since 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'I spent ten years testing other people’s software. Now I build AI features at Medevio, a platform Czech and Slovak clinics use to talk to their patients, and most of my time goes into finding out whether a change actually helped before a doctor sees it.',
+        'I came to AI from QA and release engineering. Now I build AI features at Medevio, a platform Czech and Slovak clinics use to talk to their patients, and most of my time goes into finding out whether a change actually helped before a doctor sees it.',
         'Most of the code I ship these days is written by coding agents. My job is to set the rules they work under, read what comes out, and measure it. The QA years are why I don’t take a model’s word for anything.',
         'Outside work I run a board-game club for kids and keep a Raspberry Pi busy with things it was never meant to do. This page is not one of them, on purpose: it has to stay up when the Pi doesn’t.',
       ],
@@ -172,7 +172,7 @@ export const content = {
     otherLabel: 'english',
     title: 'Jozef Čambora, AI inženýr z Prahy',
     description:
-      'Deset let v QA, teď stavím a měřím AI funkce v Medeviu. Co mi běží, kde jsem pracoval, jak mě sehnat.',
+      'Nejdřív QA a release engineering, teď stavím a měřím AI funkce v Medeviu. Co mi běží, kde jsem pracoval, jak mě sehnat.',
     skip: 'Přeskočit na obsah',
     navLabel: 'Části stránky',
     nav: { now: 'teď', work: 'co mi běží', before: 'předtím', contact: 'napište mi' },
@@ -181,7 +181,7 @@ export const content = {
       role: 'AI inženýr · Praha · v Medeviu od roku 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'Deset let jsem testoval software jiných lidí. Teď stavím AI funkce v Medeviu, přes které si české a slovenské ordinace píšou s pacienty, a většinu času zjišťuju, jestli změna doopravdy pomohla, dřív než ji uvidí doktor.',
+        'K AI jsem se dostal přes QA a release engineering. Teď stavím AI funkce v Medeviu, přes které si české a slovenské ordinace píšou s pacienty, a většinu času zjišťuju, jestli změna doopravdy pomohla, dřív než ji uvidí doktor.',
         'Většinu kódu, který dnes pouštím ven, píšou kódovací agenti. Moje práce je nastavit jim pravidla, číst, co z nich leze, a měřit to. Ty roky v QA jsou důvod, proč modelu nevěřím na slovo.',
         'Mimo práci vedu kroužek deskových her pro děti a zaměstnávám Raspberry Pi věcmi, na které nebylo stavěné. Tahle stránka mezi ně schválně nepatří: musí běžet, i když Pi zrovna ne.',
       ],

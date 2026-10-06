@@ -129,7 +129,7 @@ p { margin: 0 0 1rem; }
 .links { margin-top: 1.3rem; }
 .photo {
   float: right;
-  width: 5.5rem; height: 5.5rem;
+  width: 7rem; height: 7rem;
   object-fit: cover;
   margin: 0.2rem 0 1rem 1rem;
   border: 3px solid var(--paper);
@@ -170,8 +170,11 @@ p { margin: 0 0 1rem; }
   .photo {
     position: absolute; left: 0; top: 3.9rem;
     float: none; margin: 0;
-    width: 7.5rem; height: 7.5rem;
+    width: 10.5rem; height: 10.5rem;
   }
+}
+@media (min-width: 600px) and (max-width: 859px) {
+  .photo { width: 9rem; height: 9rem; }
 }
 
 /* ---- the háček puzzle ----------------------------------------------------- */
