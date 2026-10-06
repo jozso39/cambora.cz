@@ -44,7 +44,7 @@ export const content = {
       intro: [
         'I came to AI from QA and release engineering. Now I build AI features at Medevio, a platform Czech and Slovak clinics use to talk to their patients, and most of my time goes into finding out whether a change actually helped before a doctor sees it.',
         'Most of the code I ship these days is written by coding agents. My job is to set the rules they work under, read what comes out, and measure it. The QA years are why I don’t take a model’s word for anything.',
-        'Outside work I run a board-game club for kids and keep a Raspberry Pi busy with things it was never meant to do. This page is not one of them, on purpose: it has to stay up when the Pi doesn’t.',
+        'Outside work I run a board-game club for kids. Most of the projects below run on a Raspberry Pi in my flat.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail is at the bottom' },
     },
@@ -183,7 +183,7 @@ export const content = {
       intro: [
         'K AI jsem se dostal přes QA a release engineering. Teď stavím AI funkce v Medeviu, přes které si české a slovenské ordinace píšou s pacienty, a většinu času zjišťuju, jestli změna doopravdy pomohla, dřív než ji uvidí doktor.',
         'Většinu kódu, který dnes pouštím ven, píšou kódovací agenti. Moje práce je nastavit jim pravidla, číst, co z nich leze, a měřit to. Ty roky v QA jsou důvod, proč modelu nevěřím na slovo.',
-        'Mimo práci vedu kroužek deskových her pro děti a zaměstnávám Raspberry Pi věcmi, na které nebylo stavěné. Tahle stránka mezi ně schválně nepatří: musí běžet, i když Pi zrovna ne.',
+        'Mimo práci vedu kroužek deskových her pro děti. Většina projektů níž běží na Raspberry Pi u mě doma.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail je dole' },
     },
