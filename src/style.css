@@ -126,7 +126,6 @@ p { margin: 0 0 1rem; }
 .ch .over { position: absolute; left: 0; top: 0; color: var(--ink); }
 .role { color: var(--ink-2); margin-bottom: 1.7rem; }
 .intro { max-width: var(--measure); font-size: 1.07rem; }
-.intro em { font-style: italic; text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; }
 .links { margin-top: 1.3rem; }
 .photo {
   float: right;
@@ -163,6 +162,22 @@ p { margin: 0 0 1rem; }
 .body .meta { margin-top: 0.35rem; }
 .lead { color: var(--ink-2); }
 .rolename { font-weight: 600; }
+
+/* Results: a red-pen tick, the same red as the háček. A teacher's mark for
+   "this one is right", drawn in CSS so it does not depend on a font glyph. */
+.results { list-style: none; margin: 0.75rem 0 0; padding: 0; }
+.results li { position: relative; padding-left: 1.7rem; margin-bottom: 0.5rem; }
+.results li:last-child { margin-bottom: 0; }
+.results li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem; top: 0.38em;
+  width: 0.72rem; height: 0.36rem;
+  border-left: 2.5px solid var(--red);
+  border-bottom: 2.5px solid var(--red);
+  border-bottom-left-radius: 1px;
+  transform: rotate(-50deg) skewX(-6deg);
+}
 
 @media (min-width: 860px) {
   .row { grid-template-columns: var(--gutter) minmax(0, var(--measure)); }

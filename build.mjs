@@ -181,7 +181,12 @@ ${t.before.items
     <aside class="gutter">${n === 0 ? `<span class="k">${t.before.k}</span>` : ''}<span>${i.when}</span></aside>
     <div class="body">
       <h3>${i.where}</h3>
-      <p><span class="rolename">${i.role}.</span> ${i.text}</p>
+      <p><span class="rolename">${i.role}.</span> ${i.text}</p>${
+        i.results
+          ? `
+      <ul class="results" aria-label="${t.before.resultsLabel}">${i.results.map((r) => `<li>${r}</li>`).join('')}</ul>`
+          : ''
+      }
     </div>
   </section>`,
     )

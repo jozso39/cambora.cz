@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jozef Čambora, AI engineer in Prague</title>
-<meta name="description" content="QA and release engineering first, now building and measuring AI features at Medevio. What I run, where I worked, how to reach me.">
+<meta name="description" content="I build AI features for clinics at Medevio. Before that: QA, a QA team of six, release engineering. Projects, results, contact.">
 <link rel="canonical" href="https://cambora.cz/">
 <link rel="alternate" hreflang="en" href="https://cambora.cz/">
 <link rel="alternate" hreflang="cs" href="https://cambora.cz/cs/">
 <link rel="alternate" hreflang="x-default" href="https://cambora.cz/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Jozef Čambora, AI engineer in Prague">
-<meta property="og:description" content="QA and release engineering first, now building and measuring AI features at Medevio. What I run, where I worked, how to reach me.">
+<meta property="og:description" content="I build AI features for clinics at Medevio. Before that: QA, a QA team of six, release engineering. Projects, results, contact.">
 <meta property="og:url" content="https://cambora.cz/">
 <meta property="og:image" content="https://cambora.cz/og.jpg">
 <meta property="og:locale" content="en_US">
@@ -41,8 +41,8 @@
     <img class="photo" src="./jozef.jpg" width="480" height="480" alt="Jozef Čambora" fetchpriority="high">
     <h1 aria-label="Jozef Čambora"><span aria-hidden="true">Jozef <span class="nw"><span class="ch"><span class="under">Č</span><span class="over">C</span></span>ambora</span></span></h1>
     <p class="role">AI engineer · Prague · at Medevio since 2026</p>
-    <p class="intro">I came from QA through release engineering to <em>full-stack development</em> and <em>building AI product features</em>. At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that help doctors and nurses save time on administrative work so they can focus more on their patients.</p>
-    <p class="intro">Most of the code I ship these days is written by coding agents. My job is to set the rules they work under, read what comes out, and measure it.</p>
+    <p class="intro">At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that save doctors and nurses time on admin. I got there the long way round: QA, built and led a QA team, then release engineering, then full-stack development and AI product features, which is why I’d rather measure a feature than admire it.</p>
+    <p class="intro">These days most of the code I ship is written by coding agents. I set the rules they work under, read what comes out, and measure whether it helped.</p>
     <p class="intro">Outside work I run a board-game club for kids. Most of the projects below run on my Raspberry Pi.</p>
     <p class="meta links"><a href="https://github.com/jozso39">GitHub</a> · <a href="https://www.linkedin.com/in/jozef-cambora">LinkedIn</a> · <a href="#contact">e-mail is at the bottom</a></p>
   </section>
@@ -52,7 +52,7 @@
     <div class="body">
       <h2>Medevio</h2>
       <p>I own the AI parts of the product: drafted replies for doctors, summaries of patient requests in Czech and Slovak, processing of calls and text messages, transcripts of meetings. Prompt, code, rollout, and the evaluation that decides whether it ships at all.</p>
-      <p>We work agent-first. I keep the conventions, skills and runbooks the agents follow, with credentials cut so an agent can run a data job but can’t touch a live clinic. The part I care about most is evaluation: judges with repeated votes, holdout sets, significance tests. Changes that don’t survive the numbers get dropped, including a few of mine.</p>
+      <p>I keep the conventions, skills and runbooks the agents work from, with credentials cut so an agent can run a data job but can’t touch a live clinic. Most of my attention goes to evaluation: judges with repeated votes, holdout sets, significance tests. Changes that don’t survive the numbers get dropped, including a few of mine.</p>
       <p class="meta">typescript · bun · fastify · postgres · aws · terraform · gitlab ci · langfuse · claude code · mcp</p>
     </div>
   </section>
@@ -127,21 +127,31 @@
     <aside class="gutter"><span class="k">before</span><span>2025 to 2026</span></aside>
     <div class="body">
       <h3>ABUGO Group</h3>
-      <p><span class="rolename">AI automation engineer.</span> Internal agents in n8n, Make and TypeScript: an AI-policy agent, website classification, a recruiting bot for Slack.</p>
+      <p><span class="rolename">AI automation engineer.</span> Internal AI agents in n8n, Make and TypeScript.</p>
+      <ul class="results" aria-label="Results"><li>An AI-policy chatbot in Slack that employees used every day to check whether a given AI tool was allowed under the company’s policy.</li><li>A domain-scan agent that checks foreign websites as possible customers for group companies like Smartsupp, and flags dangerous, fraudulent sites based on user input. Hundreds of checks a day.</li></ul>
     </div>
   </section>
   <section class="row">
-    <aside class="gutter"><span>2020 to 2025</span></aside>
+    <aside class="gutter"><span>2022 to 2025</span></aside>
     <div class="body">
       <h3>Make (Celonis)</h3>
-      <p><span class="rolename">Developer experience engineer, before that QA lead.</span> Release management, automated instance deployments, and the push that got the company testing earlier instead of later.</p>
+      <p><span class="rolename">Developer experience engineer.</span> Automated the release pipelines, set up bug-ownership agreements between teams, helped build automated instance deployments, and drove the company-wide push to test earlier.</p>
+      <ul class="results" aria-label="Results"><li>Put AI into the triage of support tickets on their way to development: hundreds a week.</li></ul>
+    </div>
+  </section>
+  <section class="row">
+    <aside class="gutter"><span>2020 to 2022</span></aside>
+    <div class="body">
+      <h3>Make (Celonis)</h3>
+      <p><span class="rolename">QA lead.</span> Quality for a complex no-code automation product, with automated tests wired into the deployment process.</p>
+      <ul class="results" aria-label="Results"><li>Built and led a QA team of six.</li><li>End-to-end tests in Cypress that caught dozens of critical bugs before they reached production.</li><li>Parallelised seven hours of automated tests.</li></ul>
     </div>
   </section>
   <section class="row">
     <aside class="gutter"><span>2016 to 2020</span></aside>
     <div class="body">
       <h3>Rohlík, Zonky, Accenture</h3>
-      <p><span class="rolename">QA engineer, test analyst.</span> An online grocer, a fintech, enterprise clients.</p>
+      <p><span class="rolename">QA engineer, test analyst.</span> Manual testing and test analysis for an online grocer, a fintech and enterprise clients. At Rohlík I started automating it at the API level.</p>
     </div>
   </section>
   <section class="row">
@@ -172,7 +182,7 @@
 
 <footer class="bottom">
   <p>Plain HTML and CSS, no framework, on GitHub Pages so it stays up when the Pi doesn’t. <a href="https://github.com/jozso39/cambora.cz">source</a>.</p>
-  <p>Built 9 Oct 2026 at 21:49. The project links above were fetched during the build and answered as noted.</p>
+  <p>Built 9 Oct 2026 at 21:50. The project links above were fetched during the build and answered as noted.</p>
   <p>The domain has no háček because .cz doesn’t allow one.</p>
   <p>Jozef Čambora · Prague · <a href="./cs/" hreflang="cs" lang="cs">česky</a></p>
 </footer>
