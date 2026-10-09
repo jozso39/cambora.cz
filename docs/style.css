@@ -126,6 +126,7 @@ p { margin: 0 0 1rem; }
 .ch .over { position: absolute; left: 0; top: 0; color: var(--ink); }
 .role { color: var(--ink-2); margin-bottom: 1.7rem; }
 .intro { max-width: var(--measure); font-size: 1.07rem; }
+.intro em { font-style: italic; text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; }
 .links { margin-top: 1.3rem; }
 .photo {
   float: right;
