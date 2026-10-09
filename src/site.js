@@ -12,7 +12,10 @@
   const reveal = document.getElementById('reveal')
   const mail = document.getElementById('mail')
   const copy = document.getElementById('copy')
+  const letters = [...document.querySelectorAll('#word .l'), target]
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches
   let solved = false
+  let lit = null
 
   const address = () => `${box.dataset.u}@${box.dataset.d}.${box.dataset.t}`
 
@@ -39,17 +42,39 @@
   // Dragging the ˇ. Pointer events cover mouse, touch and pen alike.
   let drag = null
 
-  const overTarget = (x, y) => {
-    const r = target.getBoundingClientRect()
-    const pad = 14
-    return x >= r.left - pad && x <= r.right + pad && y >= r.top - pad && y <= r.bottom + pad
+  // A háček goes above a letter, so a letter counts as "under" the hook from
+  // most of a letter-height above it down to its baseline.
+  const under = (el, x, y, pad = 0) => {
+    const r = el.getBoundingClientRect()
+    return x >= r.left - pad && x <= r.right + pad && y >= r.top - r.height * 0.8 && y <= r.bottom + pad
+  }
+  const overTarget = (x, y) => under(target, x, y, 14)
+
+  // Where the hook itself is: a little above the middle of the carried box.
+  const hook = (e) => [e.clientX - drag.dx + drag.w / 2, e.clientY - drag.dy + drag.h * 0.42]
+
+  function sparkle(el) {
+    el.classList.remove('spark')
+    void el.offsetWidth // restart the animation if it is still running
+    el.classList.add('spark')
+    if (calm) return
+    for (let i = 0; i < 4; i++) {
+      const s = document.createElement('span')
+      s.className = i % 2 ? 'sparkle ink' : 'sparkle'
+      const a = Math.random() * Math.PI * 2
+      const d = 18 + Math.random() * 16
+      s.style.setProperty('--dx', `${Math.cos(a) * d}px`)
+      s.style.setProperty('--dy', `${Math.sin(a) * d - 8}px`)
+      s.addEventListener('animationend', () => s.remove())
+      el.appendChild(s)
+    }
   }
 
   caron.addEventListener('pointerdown', (e) => {
     if (solved || drag) return
     e.preventDefault()
     const r = caron.getBoundingClientRect()
-    drag = { id: e.pointerId, dx: e.clientX - r.left, dy: e.clientY - r.top }
+    drag = { id: e.pointerId, dx: e.clientX - r.left, dy: e.clientY - r.top, w: r.width, h: r.height }
     caron.classList.add('dragging')
     caron.style.width = `${r.width}px`
     caron.style.height = `${r.height}px`
@@ -60,13 +85,21 @@
     if (!drag || e.pointerId !== drag.id) return
     caron.style.left = `${e.clientX - drag.dx}px`
     caron.style.top = `${e.clientY - drag.dy}px`
-    target.classList.toggle('over', overTarget(e.clientX, e.clientY))
+    const [x, y] = hook(e)
+    target.classList.toggle('over', overTarget(x, y))
+    const now = letters.find((l) => under(l, x, y)) || null
+    if (now !== lit) {
+      lit = now
+      if (now) sparkle(now)
+    }
   }
 
   function drop(e) {
     if (!drag || e.pointerId !== drag.id) return
-    const hit = overTarget(e.clientX, e.clientY)
+    const [x, y] = hook(e)
+    const hit = overTarget(x, y)
     drag = null
+    lit = null
     caron.classList.remove('dragging')
     caron.style.left = caron.style.top = caron.style.width = caron.style.height = ''
     target.classList.remove('over')

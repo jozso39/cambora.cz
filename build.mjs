@@ -59,6 +59,9 @@ function typeset(value, key = '') {
   return value
 }
 
+/** One span per letter, for the sparkle when the háček is dragged over them. */
+const letters = (s) => [...s].map((ch) => `<span class="l">${ch}</span>`).join('')
+
 /** The name with only the háček in red: a red Č underneath, the ink C on top. */
 const hacekName = (name) =>
   name.replace(
@@ -196,7 +199,7 @@ ${t.before.items
         <p class="meta hint" id="hint">${t.contact.hint}</p>
         <div class="stage">
           <span class="slot"><span class="caron" id="caron" aria-hidden="true" title="ˇ">ˇ</span></span>
-          <span class="word">Jozef <button type="button" class="target" id="target" aria-label="${t.contact.targetLabel}" aria-describedby="hint" aria-pressed="false">C</button>ambora</span>
+          <span class="word" id="word">${letters('Jozef')} <button type="button" class="target" id="target" aria-label="${t.contact.targetLabel}" aria-describedby="hint" aria-pressed="false">C</button>${letters('ambora')}</span>
         </div>
         <div class="reveal" id="reveal" hidden>
           <p class="success">${t.contact.success}</p>

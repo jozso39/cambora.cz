@@ -209,9 +209,10 @@ p { margin: 0 0 1rem; }
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
-  background: var(--paper);
+  background: transparent;
 }
-.caron.dragging { position: fixed; z-index: 20; cursor: grabbing; }
+/* While carried, only the hook shows: no box, so the letters stay visible under it. */
+.caron.dragging { position: fixed; z-index: 20; cursor: grabbing; border-color: transparent; }
 .caron[hidden] { display: none; }
 .word {
   font-family: var(--display);
@@ -238,6 +239,29 @@ p { margin: 0 0 1rem; }
 .solved .target .under { color: var(--red); }
 .solved .target .over { position: absolute; left: 0.04em; top: 0; color: var(--ink); }
 @keyframes settle { from { transform: scale(1.2); } to { transform: scale(1); } }
+/* Letters sparkle when the háček passes over them: a flash of red and a few
+   stars flying off. Stars are spawned by site.js and removed when they finish. */
+.word .l { position: relative; }
+.spark { animation: spark 0.6s ease-out; }
+@keyframes spark {
+  0%, 30% { color: var(--red); text-shadow: 0 0 0.35em rgba(200, 16, 46, 0.45); }
+}
+.sparkle {
+  position: absolute;
+  left: 50%; top: 30%;
+  width: 0.3em; height: 0.3em;
+  margin: -0.15em 0 0 -0.15em;
+  background: var(--red);
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+  pointer-events: none;
+  animation: fly 0.65s ease-out forwards;
+}
+.sparkle.ink { background: var(--ink); width: 0.2em; height: 0.2em; margin: -0.1em 0 0 -0.1em; }
+@keyframes fly {
+  from { transform: translate(0, 0) scale(0.2) rotate(0deg); opacity: 1; }
+  60% { opacity: 1; }
+  to { transform: translate(var(--dx), var(--dy)) scale(1) rotate(90deg); opacity: 0; }
+}
 .reveal[hidden] { display: none; }
 .success { color: var(--ink-2); margin: 0.6rem 0 0.3rem; }
 .addr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.9rem; margin: 0; }
