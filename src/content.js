@@ -44,7 +44,7 @@ export const content = {
       intro: [
         'I came from QA through release engineering to <em>full-stack development</em> and <em>building AI product features</em>. At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that help doctors and nurses save time on administrative work so they can focus more on their patients.',
         'Most of the code I ship these days is written by coding agents. My job is to set the rules they work under, read what comes out, and measure it.',
-        'Outside work I run a board-game club for kids. Most of the projects below run on my Raspberry Pi.',
+        'Most of the projects below run on my Raspberry Pi, and so do some of my agents. I can work from wherever my phone is: I send an agent a task, it works on the Pi, and I check the result later.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail is at the bottom' },
     },
@@ -183,7 +183,7 @@ export const content = {
       intro: [
         'Od QA jsem se přes release engineering dostal k <em>full-stack vývoji</em> a <em>budování AI automatizací a AI funkcí do produktu</em>. V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas s administrativou, aby se mohli víc věnovat pacientům.',
         'Většinu kódu, který merguju a deployuju, píšou coding agenti, které si stavím sám. Moje práce je hlavně správně formulovat požadavky a kontrolovat jejich výstup.',
-        'Mimo práci vedu kroužek deskových her pro děti. Většina projektů níž běží na mém Raspberry Pi.',
+        'Většina projektů níž běží na mém Raspberry Pi a běží tam i část mých agentů. Pracovat můžu odkudkoli, kde mám telefon: pošlu agentovi úkol, ten na něm pracuje na Pi a já si výsledek zkontroluju později.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail je dole' },
     },
