@@ -33,7 +33,7 @@ export const content = {
     otherLabel: 'česky',
     title: 'Jozef Čambora, AI engineer in Prague',
     description:
-      'QA and release engineering first, now building and measuring AI features at Medevio. What I run, where I worked, how to reach me.',
+      'I build AI features for clinics at Medevio. Before that: QA, a QA team of six, release engineering. Projects, results, contact.',
     skip: 'Skip to content',
     navLabel: 'Sections',
     nav: { now: 'now', work: 'things I run', before: 'before', contact: 'write me' },
@@ -42,8 +42,8 @@ export const content = {
       role: 'AI engineer · Prague · at Medevio since 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'I came from QA through release engineering to <em>full-stack development</em> and <em>building AI product features</em>. At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that help doctors and nurses save time on administrative work so they can focus more on their patients.',
-        'Most of the code I ship these days is written by coding agents. My job is to set the rules they work under, read what comes out, and measure it.',
+        'At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that save doctors and nurses time on admin. I got there the long way round: QA, built and led a QA team, then release engineering, then full-stack development and AI product features, which is why I\u2019d rather measure a feature than admire it.',
+        'These days most of the code I ship is written by coding agents. I set the rules they work under, read what comes out, and measure whether it helped.',
         'Most of the projects below run on my Raspberry Pi, and so do some of my agents. I can work from wherever my phone is: I send an agent a task, it works on the Pi, and I check the result later.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail is at the bottom' },
@@ -54,7 +54,7 @@ export const content = {
       title: 'Medevio',
       paras: [
         'I own the AI parts of the product: drafted replies for doctors, summaries of patient requests in Czech and Slovak, processing of calls and text messages, transcripts of meetings. Prompt, code, rollout, and the evaluation that decides whether it ships at all.',
-        'We work agent-first. I keep the conventions, skills and runbooks the agents follow, with credentials cut so an agent can run a data job but can’t touch a live clinic. The part I care about most is evaluation: judges with repeated votes, holdout sets, significance tests. Changes that don’t survive the numbers get dropped, including a few of mine.',
+        'I keep the conventions, skills and runbooks the agents work from, with credentials cut so an agent can run a data job but can\u2019t touch a live clinic. Most of my attention goes to evaluation: judges with repeated votes, holdout sets, significance tests. Changes that don\u2019t survive the numbers get dropped, including a few of mine.',
       ],
       stack: 'typescript · bun · fastify · postgres · aws · terraform · gitlab ci · langfuse · claude code · mcp',
     },
@@ -121,24 +121,43 @@ export const content = {
     },
     before: {
       k: 'before',
+      resultsLabel: 'Results',
       items: [
         {
           when: '2025 to 2026',
           where: 'ABUGO Group',
           role: 'AI automation engineer',
-          text: 'Internal agents in n8n, Make and TypeScript: an AI-policy agent, website classification, a recruiting bot for Slack.',
+          text: 'Internal AI agents in n8n, Make and TypeScript.',
+          results: [
+            'An AI-policy chatbot in Slack that employees used every day to check whether a given AI tool was allowed under the company\u2019s policy.',
+            'A domain-scan agent that checks foreign websites as possible customers for group companies like Smartsupp, and flags dangerous, fraudulent sites based on user input. Hundreds of checks a day.',
+          ],
         },
         {
-          when: '2020 to 2025',
+          when: '2022 to 2025',
           where: 'Make (Celonis)',
-          role: 'Developer experience engineer, before that QA lead',
-          text: 'Release management, automated instance deployments, and the push that got the company testing earlier instead of later.',
+          role: 'Developer experience engineer',
+          text: 'Automated the release pipelines, set up bug-ownership agreements between teams, helped build automated instance deployments, and drove the company-wide push to test earlier.',
+          results: [
+            'Put AI into the triage of support tickets on their way to development: hundreds a week.',
+          ],
+        },
+        {
+          when: '2020 to 2022',
+          where: 'Make (Celonis)',
+          role: 'QA lead',
+          text: 'Quality for a complex no-code automation product, with automated tests wired into the deployment process.',
+          results: [
+            'Built and led a QA team of six.',
+            'End-to-end tests in Cypress that caught dozens of critical bugs before they reached production.',
+            'Parallelised seven hours of automated tests.',
+          ],
         },
         {
           when: '2016 to 2020',
           where: 'Rohlík, Zonky, Accenture',
           role: 'QA engineer, test analyst',
-          text: 'An online grocer, a fintech, enterprise clients.',
+          text: 'Manual testing and test analysis for an online grocer, a fintech and enterprise clients. At Rohlík I started automating it at the API level.',
         },
       ],
       certs: 'robot_dreams AI developer, 2025 · Harvard CS50, 2020',
@@ -172,7 +191,7 @@ export const content = {
     otherLabel: 'english',
     title: 'Jozef Čambora, AI inženýr z Prahy',
     description:
-      'Nejdřív QA a release engineering, teď stavím a měřím AI funkce v Medeviu. Co mi běží, kde jsem pracoval, jak mě sehnat.',
+      'V Medeviu stavím AI funkce pro ordinace. Předtím QA, šestičlenný QA tým a release engineering. Projekty, výsledky, kontakt.',
     skip: 'Přeskočit na obsah',
     navLabel: 'Části stránky',
     nav: { now: 'teď', work: 'co mi běží', before: 'předtím', contact: 'napište mi' },
@@ -181,9 +200,9 @@ export const content = {
       role: 'AI inženýr · Praha · v Medeviu od roku 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'Od QA jsem se přes release engineering dostal k <em>full-stack vývoji</em> a <em>budování AI automatizací a AI funkcí do produktu</em>. V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas s administrativou, aby se mohli víc věnovat pacientům.',
+        'V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas na administrativě. Dostal jsem se k tomu oklikou: QA, pak jsem postavil a vedl QA tým, potom release engineering a nakonec full-stack vývoj a budování AI automatizací a AI funkcí do produktu. Proto funkci radši změřím, než abych ji obdivoval.',
         'Většinu kódu, který merguju a deployuju, píšou coding agenti, které si stavím sám. Moje práce je hlavně správně formulovat požadavky a kontrolovat jejich výstup.',
-        'Většina projektů níž běží na mém Raspberry Pi a běží tam i část mých agentů. Pracovat můžu odkudkoli, kde mám telefon: pošlu agentovi úkol, ten na něm pracuje na Pi a já si výsledek zkontroluju později.',
+        'Většina projektů níže běží na mém Raspberry Pi a žijou tam i někteří moji agenti. Pracovat můžu odkudkoli, kde mám telefon: pošlu agentovi úkol, Pi jede, mobil v kapse a já si výsledek zkontroluju později.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail je dole' },
     },
@@ -193,7 +212,7 @@ export const content = {
       title: 'Medevio',
       paras: [
         'Mám na starosti AI části produktu: návrhy odpovědí pro lékaře, shrnutí požadavků pacientů česky i slovensky, zpracování hovorů a SMS, přepisy schůzek. Prompt, kód, nasazení a vyhodnocení, které rozhodne, jestli to vůbec půjde ven.',
-        'Pracujeme agent-first. Udržuju konvence, skilly a runbooky, podle kterých agenti jedou, s přístupy ořezanými tak, aby agent mohl spustit datovou úlohu, ale nesáhl na ostrou ordinaci. Nejvíc mi záleží na vyhodnocení: soudci s opakovaným hlasováním, holdout sady, testy významnosti. Co neprojde čísly, letí, včetně pár mých vlastních nápadů.',
+        'Udržuju konvence, skilly a runbooky, podle kterých agenti pracují, s přístupy ořezanými tak, aby agent mohl spustit datovou úlohu, ale nesáhl na ostrou ordinaci. Nejvíc pozornosti dávám vyhodnocení: soudci s opakovaným hlasováním, holdout sady, testy významnosti. Co neprojde čísly, letí, včetně pár mých vlastních nápadů.',
       ],
       stack: 'typescript · bun · fastify · postgres · aws · terraform · gitlab ci · langfuse · claude code · mcp',
     },
@@ -260,24 +279,43 @@ export const content = {
     },
     before: {
       k: 'předtím',
+      resultsLabel: 'Výsledky',
       items: [
         {
           when: '2025 až 2026',
           where: 'ABUGO Group',
           role: 'AI automation engineer',
-          text: 'Interní agenti v n8n, Make a TypeScriptu: agent pro firemní AI politiku, klasifikace webů, náborový bot pro Slack.',
+          text: 'Interní AI agenti v n8n, Make a TypeScriptu.',
+          results: [
+            'Chatbot k firemní AI politice ve Slacku, přes který si zaměstnanci každý den ověřovali, jestli daný AI nástroj smějí používat.',
+            'Agent, který prověřuje zahraniční weby jako možné zákazníky firem ze skupiny, třeba Smartsuppu, a podle vstupů od uživatelů označuje nebezpečné podvodné stránky. Stovky kontrol denně.',
+          ],
         },
         {
-          when: '2020 až 2025',
+          when: '2022 až 2025',
           where: 'Make (Celonis)',
-          role: 'Developer experience engineer, předtím QA lead',
-          text: 'Release management, automatizované nasazování instancí a tlak na to, aby se ve firmě testovalo dřív, ne později.',
+          role: 'Developer experience engineer',
+          text: 'Automatizoval jsem release pipeline, zavedl dohody o tom, kdo vlastní který bug, pomáhal stavět automatické nasazování instancí a táhl celofiremní posun k dřívějšímu testování.',
+          results: [
+            'Zapojil jsem AI do třídění tiketů, které jdou z podpory do vývoje: stovky týdně.',
+          ],
+        },
+        {
+          when: '2020 až 2022',
+          where: 'Make (Celonis)',
+          role: 'QA lead',
+          text: 'Kvalita složitého no-code produktu na automatizaci, s automatickými testy zapojenými do nasazování.',
+          results: [
+            'Postavil jsem a vedl šestičlenný QA tým.',
+            'End-to-end testy v Cypressu, které chytily desítky kritických bugů dřív, než se dostaly do produkce.',
+            'Paralelizoval jsem sedm hodin automatických testů.',
+          ],
         },
         {
           when: '2016 až 2020',
           where: 'Rohlík, Zonky, Accenture',
           role: 'QA engineer, test analyst',
-          text: 'Online supermarket, fintech, enterprise klienti.',
+          text: 'Ruční testování a analýza testů pro online supermarket, fintech a enterprise klienty. V Rohlíku jsem ho začal postupně automatizovat na úrovni API.',
         },
       ],
       certs: 'robot_dreams AI developer, 2025 · Harvard CS50, 2020',
