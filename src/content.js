@@ -202,7 +202,7 @@ export const content = {
       intro: [
         'V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas na administrativě. Dostal jsem se k tomu oklikou: QA, pak jsem postavil a vedl QA tým, potom release engineering a nakonec full-stack vývoj a budování AI automatizací a AI funkcí do produktu. Proto funkci radši změřím, než abych ji obdivoval.',
         'Většinu kódu, který merguju a deployuju, píšou coding agenti, které si stavím sám. Moje práce je hlavně správně formulovat požadavky a kontrolovat jejich výstup.',
-        'Většina projektů níž běží na mém Raspberry Pi a běží tam i část mých agentů. Pracovat můžu odkudkoli, kde mám telefon: pošlu agentovi úkol, ten na něm pracuje na Pi a já si výsledek zkontroluju později.',
+        'Většina projektů níže běží na mém Raspberry Pi a žijou tam i někteří moji agenti. Pracovat můžu odkudkoli, kde mám telefon: pošlu agentovi úkol, Pi jede, mobil v kapse a já si výsledek zkontroluju později.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail je dole' },
     },
