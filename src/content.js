@@ -42,9 +42,9 @@ export const content = {
       role: 'AI engineer · Prague · at Medevio since 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that save doctors and nurses time on admin. I got there the long way round: QA, built and led a QA team, then release engineering, then full-stack development and AI product features, which is why I\u2019d rather measure a feature than admire it.',
-        'These days most of the code I ship is written by coding agents. I set the rules they work under, read what comes out, and measure whether it helped.',
-        'Most of the projects below run on my Raspberry Pi, and so do some of my agents. I can work from wherever my phone is: I send an agent a task, it works on the Pi, and I check the result later.',
+        'At Medevio, a platform Czech and Slovak clinics use to talk to their patients, I build AI features that <strong>save doctors and nurses time on admin</strong>. I got there the long way round: QA, built and led a QA team, then release engineering, then <em><span class="nw">full-stack</span> development</em> and <em>AI product features</em>, which is why I\u2019d rather measure a feature than admire it.',
+        'These days most of the code I ship is written by <em>coding agents</em>. I set the rules they work under, read what comes out, and <strong>measure whether it helped</strong>.',
+        'Most of the projects below run on my Raspberry Pi, and so do some of my agents. I can work from <strong>wherever my phone is</strong>: I send an agent a task, it works on the Pi, and I check the result later.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail is at the bottom' },
     },
@@ -129,8 +129,8 @@ export const content = {
           role: 'AI automation engineer',
           text: 'Internal AI agents in n8n, Make and TypeScript.',
           results: [
-            'An AI-policy chatbot in Slack that employees used every day to check whether a given AI tool was allowed under the company\u2019s policy.',
-            'A domain-scan agent that checks foreign websites as possible customers for group companies like Smartsupp, and flags dangerous, fraudulent sites based on user input. Hundreds of checks a day.',
+            'An AI-policy chatbot in Slack that employees used <strong>every day</strong> to check whether a given AI tool was allowed under the company\u2019s policy.',
+            'A domain-scan agent that checks foreign websites as possible customers for group companies like Smartsupp, and flags dangerous, fraudulent sites based on user input. <strong>Hundreds of checks a day.</strong>',
           ],
         },
         {
@@ -139,7 +139,7 @@ export const content = {
           role: 'Developer experience engineer',
           text: 'Automated the release pipelines, set up bug-ownership agreements between teams, helped build automated instance deployments, and drove the company-wide push to test earlier.',
           results: [
-            'Put AI into the triage of support tickets on their way to development: hundreds a week.',
+            'Put AI into the triage of support tickets on their way to development: <strong>hundreds a week</strong>.',
           ],
         },
         {
@@ -148,9 +148,9 @@ export const content = {
           role: 'QA lead',
           text: 'Quality for a complex no-code automation product, with automated tests wired into the deployment process.',
           results: [
-            'Built and led a QA team of six.',
-            'End-to-end tests in Cypress that caught dozens of critical bugs before they reached production.',
-            'Parallelised seven hours of automated tests.',
+            'Built and led a QA team of <strong>six</strong>.',
+            'End-to-end tests in Cypress that caught <strong>dozens of critical bugs</strong> before they reached production.',
+            'Parallelised <strong>seven hours</strong> of automated tests.',
           ],
         },
         {
@@ -200,9 +200,9 @@ export const content = {
       role: 'AI inženýr · Praha · v Medeviu od roku 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas na administrativě. Dostal jsem se k tomu oklikou: QA, pak jsem postavil a vedl QA tým, potom release engineering a nakonec full-stack vývoj a budování AI automatizací a AI funkcí do produktu. Proto funkci radši změřím, než abych ji obdivoval.',
-        'Většinu kódu, který merguju a deployuju, píšou coding agenti, které si stavím sám. Moje práce je hlavně správně formulovat požadavky a kontrolovat jejich výstup.',
-        'Většina projektů níže běží na mém Raspberry Pi a žijou tam i někteří moji agenti. Pracovat můžu odkudkoli, kde mám telefon: pošlu agentovi úkol, Pi jede, mobil v kapse a já si výsledek zkontroluju později.',
+        'V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které <strong>lékařům a sestrám šetří čas na administrativě</strong>. Dostal jsem se k tomu oklikou: QA, pak jsem postavil a vedl QA tým, potom release engineering a nakonec <em><span class="nw">full-stack</span> vývoj</em> a <em>budování AI automatizací a AI funkcí do produktu</em>. Proto funkci radši změřím, než abych ji obdivoval.',
+        'Většinu kódu, který merguju a deployuju, píšou <em>coding agenti</em>, které si stavím sám. Moje práce je hlavně <strong>správně formulovat požadavky a kontrolovat jejich výstup</strong>.',
+        'Většina projektů níže běží na mém Raspberry Pi a žijou tam i někteří moji agenti. Pracovat můžu <strong>odkudkoli, kde mám telefon</strong>: pošlu agentovi úkol, Pi jede, mobil v kapse a já si výsledek zkontroluju později.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail je dole' },
     },
@@ -287,8 +287,8 @@ export const content = {
           role: 'AI automation engineer',
           text: 'Interní AI agenti v n8n, Make a TypeScriptu.',
           results: [
-            'Chatbot k firemní AI politice ve Slacku, přes který si zaměstnanci každý den ověřovali, jestli daný AI nástroj smějí používat.',
-            'Agent, který prověřuje zahraniční weby jako možné zákazníky firem ze skupiny, třeba Smartsuppu, a podle vstupů od uživatelů označuje nebezpečné podvodné stránky. Stovky kontrol denně.',
+            'Chatbot k firemní AI politice ve Slacku, přes který si zaměstnanci <strong>každý den</strong> ověřovali, jestli daný AI nástroj smějí používat.',
+            'Agent, který prověřuje zahraniční weby jako možné zákazníky firem ze skupiny, třeba Smartsuppu, a podle vstupů od uživatelů označuje nebezpečné podvodné stránky. <strong>Stovky kontrol denně.</strong>',
           ],
         },
         {
@@ -297,7 +297,7 @@ export const content = {
           role: 'Developer experience engineer',
           text: 'Automatizoval jsem release pipeline, zavedl dohody o tom, kdo vlastní který bug, pomáhal stavět automatické nasazování instancí a táhl celofiremní posun k dřívějšímu testování.',
           results: [
-            'Zapojil jsem AI do třídění tiketů, které jdou z podpory do vývoje: stovky týdně.',
+            'Zapojil jsem AI do třídění tiketů, které jdou z podpory do vývoje: <strong>stovky týdně</strong>.',
           ],
         },
         {
@@ -306,9 +306,9 @@ export const content = {
           role: 'QA lead',
           text: 'Kvalita složitého no-code produktu na automatizaci, s automatickými testy zapojenými do nasazování.',
           results: [
-            'Postavil jsem a vedl šestičlenný QA tým.',
-            'End-to-end testy v Cypressu, které chytily desítky kritických bugů dřív, než se dostaly do produkce.',
-            'Paralelizoval jsem sedm hodin automatických testů.',
+            'Postavil jsem a vedl <strong>šestičlenný</strong> QA tým.',
+            'End-to-end testy v Cypressu, které chytily <strong>desítky kritických bugů</strong> dřív, než se dostaly do produkce.',
+            'Paralelizoval jsem <strong>sedm hodin</strong> automatických testů.',
           ],
         },
         {
