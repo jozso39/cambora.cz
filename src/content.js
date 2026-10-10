@@ -181,8 +181,8 @@ export const content = {
       role: 'AI inženýr · Praha · v Medeviu od roku 2026',
       photoAlt: 'Jozef Čambora',
       intro: [
-        'Od QA jsem se přes release engineering dostal k <em>full-stack vývoji</em> a <em>stavění AI funkcí do produktu</em>. V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas s administrativou, aby se mohli víc věnovat pacientům.',
-        'Většinu kódu, který dnes pouštím ven, píšou kódovací agenti. Moje práce je nastavit jim pravidla, číst, co z nich leze, a měřit to.',
+        'Od QA jsem se přes release engineering dostal k <em>full-stack vývoji</em> a <em>budování AI automatizací a AI funkcí do produktu</em>. V Medeviu, přes které si české a slovenské ordinace píšou s pacienty, stavím AI funkce, které lékařům a sestrám šetří čas s administrativou, aby se mohli víc věnovat pacientům.',
+        'Většinu kódu, který merguju a deployuju, píšou coding agenti, které si stavím sám. Moje práce je hlavně správně formulovat požadavky a kontrolovat jejich výstup.',
         'Mimo práci vedu kroužek deskových her pro děti. Většina projektů níž běží na mém Raspberry Pi.',
       ],
       links: { github: 'GitHub', linkedin: 'LinkedIn', email: 'e-mail je dole' },
